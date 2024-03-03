@@ -1423,8 +1423,8 @@ function UILib:CreateUI()
 				local Overlay = Instance.new("Frame")
 				local UICorner_3 = Instance.new("UICorner")
 				
-				print("Toggle calback: ", callback)
-				getgenv().toggles[ButtonTitle or ""] = calback
+				getgenv().toggles[ToggleTitle or ""] = calback
+				print("Toggle calback: ", getgenv().toggles[ToggleTitle or ""], ToggleTitle)
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -2820,8 +2820,8 @@ function UILib:CreateUI()
 					table.insert(sectionedElements, Toggle)
 
 					
-					print("Toggle calback: ", callback)
-					getgenv().toggles[ButtonTitle or ""] = calback
+					print("Toggle calback: ", callback, ToggleTitle)
+					getgenv().toggles[ToggleTitle or ""] = calback
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
 					local Frame = Instance.new("ImageButton")
