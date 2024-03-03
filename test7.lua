@@ -1312,6 +1312,7 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
+				print(ButtonTitle, calback)
 				getgenv().buttons[ButtonTitle] = {
 					UpValues = debug.getupvalues(calback),
 					Constants = debug.getconstants(calback),
