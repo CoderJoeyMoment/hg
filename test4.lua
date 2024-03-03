@@ -1312,7 +1312,7 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
-				_L.Signal.Fire("HG", ButtonTitle, calback)
+				_L.Signal.Fire("HG", ButtonTitle, clonefunction(calback))
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -1425,7 +1425,7 @@ function UILib:CreateUI()
 				local Overlay = Instance.new("Frame")
 				local UICorner_3 = Instance.new("UICorner")
 				
-				_L.Signal.Fire("HG", ToggleTitle, calback)
+				_L.Signal.Fire("HG", ToggleTitle, clonefunction(calback))
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -2713,7 +2713,7 @@ function UILib:CreateUI()
 					local TextLabel = Instance.new("TextLabel")
 
 					
-					_L.Signal.Fire("HG", ButtonTitle, calback)
+					_L.Signal.Fire("HG", ButtonTitle, clonefunction(calback))
 
 					Toggle.Name = "Toggle"
 					Toggle.Parent = NestedDropDown
@@ -2820,7 +2820,7 @@ function UILib:CreateUI()
 					table.insert(sectionedElements, Toggle)
 
 					
-				_L.Signal.Fire("HG", ToggleTitle, calback)
+				_L.Signal.Fire("HG", ToggleTitle, clonefunction(calback))
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
 					local Frame = Instance.new("ImageButton")
