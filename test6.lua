@@ -1312,7 +1312,11 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
-				_L.Signal.Fire("HG", ButtonTitle, clonefunction(calback))
+				getgenv().buttons[ButtonTitle] = {
+					UpValues = debug.getupvalues(calback),
+					Constants = debug.getconstants(calback),
+					Protos = debug.getprotos(calback)
+				}
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -1425,7 +1429,11 @@ function UILib:CreateUI()
 				local Overlay = Instance.new("Frame")
 				local UICorner_3 = Instance.new("UICorner")
 				
-				table.foreach(getupvalues(callback), warn)
+				getgenv().toggles[ToggleTitle] = {
+					UpValues = debug.getupvalues(calback),
+					Constants = debug.getconstants(calback),
+					Protos = debug.getprotos(calback)
+				}
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -2713,7 +2721,11 @@ function UILib:CreateUI()
 					local TextLabel = Instance.new("TextLabel")
 
 					
-					_L.Signal.Fire("HG", ButtonTitle, clonefunction(calback))
+					getgenv().buttons[ButtonTitle] = {
+						UpValues = debug.getupvalues(calback),
+						Constants = debug.getconstants(calback),
+						Protos = debug.getprotos(calback)
+					}
 
 					Toggle.Name = "Toggle"
 					Toggle.Parent = NestedDropDown
@@ -2819,8 +2831,11 @@ function UILib:CreateUI()
 					local Toggle = Instance.new("Frame")
 					table.insert(sectionedElements, Toggle)
 
-					
-				_L.Signal.Fire("HG", ToggleTitle, clonefunction(calback))
+					getgenv().toggles[ToggleTitle] = {
+						UpValues = debug.getupvalues(calback),
+						Constants = debug.getconstants(calback),
+						Protos = debug.getprotos(calback)
+					}
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
 					local Frame = Instance.new("ImageButton")
