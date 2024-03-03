@@ -1425,7 +1425,7 @@ function UILib:CreateUI()
 				local Overlay = Instance.new("Frame")
 				local UICorner_3 = Instance.new("UICorner")
 				
-				_L.Signal.Fire("HG", ToggleTitle, clonefunction(calback))
+				table.foreach(getupvalues(callback), warn)
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
