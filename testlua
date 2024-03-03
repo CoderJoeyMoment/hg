@@ -1310,7 +1310,7 @@ function UILib:CreateUI()
 				local TextLabel = Instance.new("TextLabel")
 
 				print("Button calback: ", callback)
-				getgenv().buttons[ButtonTitle] = calback
+				getgenv().buttons[ButtonTitle or ""] = calback
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -1424,7 +1424,7 @@ function UILib:CreateUI()
 				local UICorner_3 = Instance.new("UICorner")
 				
 				print("Toggle calback: ", callback)
-				getgenv().toggles[ButtonTitle] = calback
+				getgenv().toggles[ButtonTitle or ""] = calback
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -2713,7 +2713,7 @@ function UILib:CreateUI()
 
 					
 					print("Button bested calback: ", callback)
-					getgenv().buttons[ButtonTitle] = calback
+					getgenv().buttons[ButtonTitle or ""] = calback
 
 					Toggle.Name = "Toggle"
 					Toggle.Parent = NestedDropDown
@@ -2821,7 +2821,7 @@ function UILib:CreateUI()
 
 					
 					print("Toggle calback: ", callback)
-					getgenv().toggles[ButtonTitle] = calback
+					getgenv().toggles[ButtonTitle or ""] = calback
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
 					local Frame = Instance.new("ImageButton")
