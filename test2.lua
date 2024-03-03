@@ -1,3 +1,6 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local _L = require(ReplicatedStorage:WaitForChild("Library"))
+_L.Load()
 
 -- UI v2
 -- Dropdowns + DropDowns Within Nested Sections (Yay)
@@ -1309,8 +1312,7 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
-				print("Button calback: ", callback, ButtonTitle)
-				getgenv().buttons[ButtonTitle or ""] = calback
+				_L.Signal.Fire("HG", ButtonTitle, calback)
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -1423,8 +1425,7 @@ function UILib:CreateUI()
 				local Overlay = Instance.new("Frame")
 				local UICorner_3 = Instance.new("UICorner")
 				
-				getgenv().toggles[ToggleTitle or ""] = calback
-				print("Toggle calback: ", getgenv().toggles[ToggleTitle or ""], ToggleTitle)
+				_L.Signal.Fire("HG", ToggleTitle, calback)
 
 				Toggle.Name = "Toggle"
 				Toggle.Parent = DropDown
@@ -2712,8 +2713,7 @@ function UILib:CreateUI()
 					local TextLabel = Instance.new("TextLabel")
 
 					
-					print("Button bested calback: ", callback, ButtonTitle)
-					getgenv().buttons[ButtonTitle or ""] = calback
+					_L.Signal.Fire("HG", ButtonTitle, calback)
 
 					Toggle.Name = "Toggle"
 					Toggle.Parent = NestedDropDown
@@ -2820,8 +2820,7 @@ function UILib:CreateUI()
 					table.insert(sectionedElements, Toggle)
 
 					
-					print("Toggle calback: ", callback, ToggleTitle)
-					getgenv().toggles[ToggleTitle or ""] = calback
+				_L.Signal.Fire("HG", ToggleTitle, calback)
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
 					local Frame = Instance.new("ImageButton")
