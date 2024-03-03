@@ -1312,11 +1312,10 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
-				print(ButtonTitle, calback)
 				getgenv().buttons[ButtonTitle] = {
-					UpValues = debug.getupvalues(calback),
-					Constants = debug.getconstants(calback),
-					Protos = debug.getprotos(calback)
+					UpValues = debug.getupvalues(callback),
+					Constants = debug.getconstants(callback),
+					Protos = debug.getprotos(callback)
 				}
 
 				Toggle.Name = "Toggle"
@@ -1431,9 +1430,9 @@ function UILib:CreateUI()
 				local UICorner_3 = Instance.new("UICorner")
 				
 				getgenv().toggles[ToggleTitle] = {
-					UpValues = debug.getupvalues(calback),
-					Constants = debug.getconstants(calback),
-					Protos = debug.getprotos(calback)
+					UpValues = debug.getupvalues(callback),
+					Constants = debug.getconstants(callback),
+					Protos = debug.getprotos(callback)
 				}
 
 				Toggle.Name = "Toggle"
@@ -2723,9 +2722,9 @@ function UILib:CreateUI()
 
 					
 					getgenv().buttons[ButtonTitle] = {
-						UpValues = debug.getupvalues(calback),
-						Constants = debug.getconstants(calback),
-						Protos = debug.getprotos(calback)
+						UpValues = debug.getupvalues(callback),
+						Constants = debug.getconstants(callback),
+						Protos = debug.getprotos(callback)
 					}
 
 					Toggle.Name = "Toggle"
@@ -2833,9 +2832,9 @@ function UILib:CreateUI()
 					table.insert(sectionedElements, Toggle)
 
 					getgenv().toggles[ToggleTitle] = {
-						UpValues = debug.getupvalues(calback),
-						Constants = debug.getconstants(calback),
-						Protos = debug.getprotos(calback)
+						UpValues = debug.getupvalues(callback),
+						Constants = debug.getconstants(callback),
+						Protos = debug.getprotos(callback)
 					}
 					local UICorner = Instance.new("UICorner")
 					local Title = Instance.new("TextLabel")
