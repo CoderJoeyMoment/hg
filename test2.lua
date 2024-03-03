@@ -1309,7 +1309,7 @@ function UILib:CreateUI()
 				local UICorner_2 = Instance.new("UICorner")
 				local TextLabel = Instance.new("TextLabel")
 
-				print("Button calback: ", callback)
+				print("Button calback: ", callback, ButtonTitle)
 				getgenv().buttons[ButtonTitle or ""] = calback
 
 				Toggle.Name = "Toggle"
@@ -2712,7 +2712,7 @@ function UILib:CreateUI()
 					local TextLabel = Instance.new("TextLabel")
 
 					
-					print("Button bested calback: ", callback)
+					print("Button bested calback: ", callback, ButtonTitle)
 					getgenv().buttons[ButtonTitle or ""] = calback
 
 					Toggle.Name = "Toggle"
